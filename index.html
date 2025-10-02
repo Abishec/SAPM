@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Management Solution for Shree</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">Portfolio Management Solution for Shree</h1>
+                <nav class="nav">
+                    <a href="#overview" class="nav-link">Overview</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#goals" class="nav-link">Goals</a>
+                    <a href="#allocation" class="nav-link">Allocation</a>
+                    <a href="#projections" class="nav-link">Projections</a>
+                    <a href="#ips" class="nav-link">IPS</a>
+                    <a href="#team" class="nav-link">Team</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Client Overview Section -->
+    <section id="overview" class="section">
+        <div class="container">
+            <h2 class="section-title">Client Overview</h2>
+            <div class="client-card">
+                <div class="client-info">
+                    <div class="client-header">
+                        <div class="client-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="client-details">
+                            <h3 class="client-name">Shree</h3>
+                            <p class="client-role">Business Head, Global Consulting Firm</p>
+                        </div>
+                    </div>
+                    <div class="client-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Age</span>
+                            <span class="stat-value">40 years</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Status</span>
+                            <span class="stat-value">Single Mother</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Daughter's Age</span>
+                            <span class="stat-value">10 years</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Monthly Income</span>
+                            <span class="stat-value">₹1,30,000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Risk Profile</span>
+                            <span class="stat-value">Moderate to Aggressive</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Investment Horizon</span>
+                            <span class="stat-value">Long-term (20+ years)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2 class="section-title">Current Portfolio</h2>
+            <div class="portfolio-summary">
+                <div class="total-value-card">
+                    <h3 class="total-label">Total Portfolio Value</h3>
+                    <div class="total-amount">₹3,18,96,000</div>
+                    <div class="total-amount-sub">(₹3.19 Crores)</div>
+                </div>
+            </div>
+            
+            <!-- Large Portfolio Chart -->
+            <div class="portfolio-chart-section">
+                <h3 class="chart-title">Portfolio Distribution</h3>
+                <div class="large-chart-container" style="position: relative; height: 700px;">
+                    <canvas id="portfolioChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Detailed Portfolio Table -->
+            <div class="portfolio-table-section">
+                <h3>Current Portfolio Holdings</h3>
+                <div class="portfolio-table">
+                    <div class="table-row table-header">
+                        <div class="table-cell">Investment Type</div>
+                        <div class="table-cell">Current Value (₹)</div>
+                        <div class="table-cell">Value (Lakhs)</div>
+                        <div class="table-cell">Percentage</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">HDFC Mid Cap Fund</div>
+                        <div class="table-cell">₹25,00,000</div>
+                        <div class="table-cell">₹25.0 L</div>
+                        <div class="table-cell">7.8%</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Parag Parikh Flexi Cap</div>
+                        <div class="table-cell">₹35,00,000</div>
+                        <div class="table-cell">₹35.0 L</div>
+                        <div class="table-cell">11.0%</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">ICICI Value Discovery</div>
+                        <div class="table-cell">₹40,00,000</div>
+                        <div class="table-cell">₹40.0 L</div>
+                        <div class="table-cell">12.5%</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">ICICI Thematic FoF</div>
+                        <div class="table-cell">₹25,00,000</div>
+                        <div class="table-cell">₹25.0 L</div>
+                        <div class="table-cell">7.8%</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Nippon Nivesh Lakshya</div>
+                        <div class="table-cell">₹35,00,000</div>
+                        <div class="table-cell">₹35.0 L</div>
+                        <div class="table-cell">11.0%</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Aditya Birla Balanced</div>
+                        <div class="table-cell">₹28,00,000</div>
+                        <div class="table-cell">₹28.0 L</div>
+                        <div class="table-cell">8.8%</div>
+                    </div>
+                    <div class="table-row highlight-row">
+                        <div class="table-cell">Bank FD (6 months)</div>
+                        <div class="table-cell">₹70,00,000</div>
+                        <div class="table-cell">₹70.0 L</div>
+                        <div class="table-cell">21.9%</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Bank FD (1 month)</div>
+                        <div class="table-cell">₹10,70,000</div>
+                        <div class="table-cell">₹10.7 L</div>
+                        <div class="table-cell">3.4%</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">PPF Self</div>
+                        <div class="table-cell">₹15,86,000</div>
+                        <div class="table-cell">₹15.86 L</div>
+                        <div class="table-cell">5.0%</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">PPF Daughter</div>
+                        <div class="table-cell">₹12,50,000</div>
+                        <div class="table-cell">₹12.5 L</div>
+                        <div class="table-cell">3.9%</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">PF Employer</div>
+                        <div class="table-cell">₹4,90,000</div>
+                        <div class="table-cell">₹4.9 L</div>
+                        <div class="table-cell">1.5%</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Savings Account</div>
+                        <div class="table-cell">₹13,50,000</div>
+                        <div class="table-cell">₹13.5 L</div>
+                        <div class="table-cell">4.2%</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">HDFC Life Insurance</div>
+                        <div class="table-cell">₹3,50,000</div>
+                        <div class="table-cell">₹3.5 L</div>
+                        <div class="table-cell">1.1%</div>
+                    </div>
+                    <div class="table-row total-row">
+                        <div class="table-cell"><strong>Total</strong></div>
+                        <div class="table-cell"><strong>₹3,18,96,000</strong></div>
+                        <div class="table-cell"><strong>₹318.96 L</strong></div>
+                        <div class="table-cell"><strong>100%</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Goals Section -->
+    <section id="goals" class="section">
+        <div class="container">
+            <h2 class="section-title">Financial Goals</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="goal-title">Daughter's Education</h3>
+                    <div class="goal-amount">₹2.14 Crores</div>
+                    <div class="goal-year">Target: 2033</div>
+                    <div class="goal-description">Medical degree (MBBS/MD) including post-graduate studies</div>
+                    <div class="goal-current">
+                        <span>Current Allocation: ₹12.5 L (PPF Daughter)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 5.8%"></div>
+                    </div>
+                    <div class="progress-text">Current Progress: 5.8%</div>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="goal-title">Car Replacement</h3>
+                    <div class="goal-amount">₹20.07 Lakhs</div>
+                    <div class="goal-year">Target: 2030</div>
+                    <div class="goal-description">Replace 2-year-old car worth ₹15 lakhs today</div>
+                    <div class="goal-current">
+                        <span>Current Allocation: No specific allocation yet</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-text">Current Progress: 0%</div>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="goal-title">Retirement Planning</h3>
+                    <div class="goal-amount">₹5.58 Crores</div>
+                    <div class="goal-year">Target: 2045</div>
+                    <div class="goal-description">Monthly expenses of ₹50,000 plus companion cost of ₹20,000 post-75</div>
+                    <div class="goal-current">
+                        <span>Current Allocation: ₹19.36 L (PPF Self + PF + Insurance)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 3.5%"></div>
+                    </div>
+                    <div class="progress-text">Current Progress: 3.5%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Asset Allocation Section -->
+    <section id="allocation" class="section">
+        <div class="container">
+            <h2 class="section-title">Recommended Asset Allocation</h2>
+            
+            <!-- Category-based Allocation -->
+            <div class="allocation-categories">
+                <!-- Equity Funds -->
+                <div class="category-section">
+                    <h3 class="category-title">EQUITY FUNDS (39%)</h3>
+                    <div class="category-grid">
+                        <div class="subcategory">
+                            <h4>Large Cap (10%)</h4>
+                            <div class="fund-list">
+                                <div class="fund-item">HDFC Top 100 Fund (5%)</div>
+                                <div class="fund-item">ICICI Prudential Bluechip Fund (5%)</div>
+                            </div>
+                        </div>
+                        <div class="subcategory">
+                            <h4>Mid Cap (8%)</h4>
+                            <div class="fund-list">
+                                <div class="fund-item">SBI Mid cap Direct Plan Growth (5%)</div>
+                                <div class="fund-item">HDFC Mid Cap Fund (3%)</div>
+                            </div>
+                        </div>
+                        <div class="subcategory">
+                            <h4>Small Cap (5%)</h4>
+                            <div class="fund-list">
+                                <div class="fund-item">SBI Small Cap Fund (5%)</div>
+                            </div>
+                        </div>
+                        <div class="subcategory">
+                            <h4>Flexi Cap (6%)</h4>
+                            <div class="fund-list">
+                                <div class="fund-item">Parag Parikh Flexi Cap Fund (3%)</div>
+                                <div class="fund-item">HDFC Flexi Cap Fund (3%)</div>
+                            </div>
+                        </div>
+                        <div class="subcategory">
+                            <h4>ELSS (6%)</h4>
+                            <div class="fund-list">
+                                <div class="fund-item">Mirae Asset Tax Saver (3%)</div>
+                                <div class="fund-item">Canara Robeco ELSS Tax Saver (3%)</div>
+                            </div>
+                        </div>
+                        <div class="subcategory">
+                            <h4>Hybrid (4%)</h4>
+                            <div class="fund-list">
+                                <div class="fund-item">SBI Small Cap Fund (4%)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hybrid Funds -->
+                <div class="category-section">
+                    <h3 class="category-title">HYBRID FUNDS (10%)</h3>
+                    <div class="category-grid">
+                        <div class="subcategory">
+                            <div class="fund-list">
+                                <div class="fund-item">DSP Dynamic Asset Allocation Fund (5%)</div>
+                                <div class="fund-item">ICICI Balanced Advantage Fund (5%)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Debt Funds -->
+                <div class="category-section">
+                    <h3 class="category-title">DEBT FUNDS (50%)</h3>
+                    <div class="category-grid">
+                        <div class="subcategory">
+                            <h4>Short Term Debt (20%)</h4>
+                            <div class="fund-list">
+                                <div class="fund-item">ICICI Prudential Short Term Fund (10%)</div>
+                                <div class="fund-item">HDFC Short Term Debt Fund (10%)</div>
+                            </div>
+                        </div>
+                        <div class="subcategory">
+                            <h4>Liquid (20%)</h4>
+                            <div class="fund-list">
+                                <div class="fund-item">Nippon Liquid Fund (10%)</div>
+                                <div class="fund-item">HDFC Liquid Fund (10%)</div>
+                            </div>
+                        </div>
+                        <div class="subcategory">
+                            <h4>Long Term Debt (10%)</h4>
+                            <div class="fund-list">
+                                <div class="fund-item">SBI Magnum Income Fund (5%)</div>
+                                <div class="fund-item">ICICI Prudential Long Term Bond Fund (5%)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gold -->
+                <div class="category-section">
+                    <h3 class="category-title">GOLD (5%)</h3>
+                    <div class="category-grid">
+                        <div class="subcategory">
+                            <div class="fund-list">
+                                <div class="fund-item">Axis Gold Fund (5%)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Large Allocation Chart -->
+            <div class="allocation-chart-section">
+                <h3 class="chart-title">Recommended Asset Allocation</h3>
+                <div class="large-chart-container" style="position: relative; height: 600px;">
+                    <canvas id="allocationChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Projections Section -->
+    <section id="projections" class="section">
+        <div class="container">
+            <h2 class="section-title">Portfolio Growth Projections</h2>
+            
+            <!-- Large Growth Chart -->
+            <div class="projection-chart-section">
+                <h3 class="chart-title">15-Year Portfolio Growth Projection</h3>
+                <div class="large-chart-container" style="position: relative; height: 600px;">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Projection Table -->
+            <div class="projection-table-section">
+                <h3>Year-wise Portfolio Projections (Excel Data)</h3>
+                <div class="projection-table">
+                    <div class="table-row table-header">
+                        <div class="table-cell">Year</div>
+                        <div class="table-cell">End Portfolio (₹)</div>
+                        <div class="table-cell">Portfolio (Crores)</div>
+                        <div class="table-cell">Growth Rate</div>
+                    </div>
+                    <div class="table-row"><div class="table-cell">2025</div><div class="table-cell">₹3,61,27,235</div><div class="table-cell">₹3.61 Cr</div><div class="table-cell">11.2%</div></div>
+                    <div class="table-row"><div class="table-cell">2026</div><div class="table-cell">₹4,02,86,675</div><div class="table-cell">₹4.03 Cr</div><div class="table-cell">11.2%</div></div>
+                    <div class="table-row"><div class="table-cell">2027</div><div class="table-cell">₹4,60,17,920</div><div class="table-cell">₹4.60 Cr</div><div class="table-cell">11.2%</div></div>
+                    <div class="table-row"><div class="table-cell">2028</div><div class="table-cell">₹5,12,21,165</div><div class="table-cell">₹5.12 Cr</div><div class="table-cell">11.2%</div></div>
+                    <div class="table-row"><div class="table-cell">2029</div><div class="table-cell">₹5,67,59,074</div><div class="table-cell">₹5.68 Cr</div><div class="table-cell">11.2%</div></div>
+                    <div class="table-row"><div class="table-cell">2030</div><div class="table-cell">₹6,02,36,930</div><div class="table-cell">₹6.02 Cr</div><div class="table-cell">10.0%</div></div>
+                    <div class="table-row"><div class="table-cell">2031</div><div class="table-cell">₹6,60,81,420</div><div class="table-cell">₹6.61 Cr</div><div class="table-cell">10.0%</div></div>
+                    <div class="table-row"><div class="table-cell">2032</div><div class="table-cell">₹7,25,17,280</div><div class="table-cell">₹7.25 Cr</div><div class="table-cell">10.0%</div></div>
+                    <div class="table-row"><div class="table-cell">2033</div><div class="table-cell">₹6,71,09,420</div><div class="table-cell">₹6.71 Cr</div><div class="table-cell">10.0%</div></div>
+                    <div class="table-row"><div class="table-cell">2034</div><div class="table-cell">₹7,44,53,050</div><div class="table-cell">₹7.45 Cr</div><div class="table-cell">10.0%</div></div>
+                    <div class="table-row"><div class="table-cell">2035</div><div class="table-cell">₹12,62,19,100</div><div class="table-cell">₹12.62 Cr</div><div class="table-cell">9.0%</div></div>
+                    <div class="table-row"><div class="table-cell">2036</div><div class="table-cell">₹13,82,61,100</div><div class="table-cell">₹13.83 Cr</div><div class="table-cell">9.0%</div></div>
+                    <div class="table-row"><div class="table-cell">2037</div><div class="table-cell">₹15,14,09,700</div><div class="table-cell">₹15.14 Cr</div><div class="table-cell">9.0%</div></div>
+                    <div class="table-row"><div class="table-cell">2038</div><div class="table-cell">₹16,57,63,100</div><div class="table-cell">₹16.58 Cr</div><div class="table-cell">9.0%</div></div>
+                    <div class="table-row"><div class="table-cell">2039</div><div class="table-cell">₹18,14,28,000</div><div class="table-cell">₹18.14 Cr</div><div class="table-cell">9.0%</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Policy Statement Section -->
+    <section id="ips" class="section">
+        <div class="container">
+            <h2 class="section-title">Investment Policy Statement</h2>
+            <div class="ips-content">
+                <div class="ips-grid">
+                    <div class="ips-card">
+                        <h3>Investment Objectives</h3>
+                        <ul class="ips-list">
+                            <li>Fund daughter's medical education (₹2.14 Cr by 2033)</li>
+                            <li>Maintain current lifestyle and annual holidays</li>
+                            <li>Car replacement every 5 years (₹20.07L by 2030)</li>
+                            <li>Build retirement corpus for comfortable post-retirement life (₹5.58 Cr by 2045)</li>
+                            <li>Preserve and grow current investment portfolio value</li>
+                        </ul>
+                    </div>
+
+                    <div class="ips-card">
+                        <h3>Risk Profile</h3>
+                        <ul class="ips-list">
+                            <li><strong>Risk Tolerance:</strong> Moderate to Aggressive</li>
+                            <li><strong>Investment Horizon:</strong> Long-term (20+ years)</li>
+                            <li><strong>Risk Capacity:</strong> High due to stable income</li>
+                            <li><strong>Loss Tolerance:</strong> Can withstand short-term volatility</li>
+                            <li><strong>Experience:</strong> Some equity exposure, MBA qualified</li>
+                        </ul>
+                    </div>
+
+                    <div class="ips-card">
+                        <h3>Constraints</h3>
+                        <ul class="ips-list">
+                            <li><strong>Liquidity:</strong> Maintain emergency fund in savings/FD</li>
+                            <li><strong>Time Horizon:</strong> 25 years until retirement</li>
+                            <li><strong>Tax Considerations:</strong> Highest tax bracket - optimize tax efficiency</li>
+                            <li><strong>Legal:</strong> Continue PPF and PF contributions</li>
+                            <li><strong>Unique:</strong> Single mother responsibilities</li>
+                        </ul>
+                    </div>
+
+                    <div class="ips-card">
+                        <h3>Strategic Asset Allocation</h3>
+                        <ul class="ips-list">
+                            <li><strong>Equity Funds:</strong> 39% (Large, Mid, Small, Flexi Cap, ELSS)</li>
+                            <li><strong>Debt Funds:</strong> 50% (Short term, Liquid, Long term)</li>
+                            <li><strong>Hybrid Funds:</strong> 10% (Balanced advantage funds)</li>
+                            <li><strong>Gold:</strong> 5% (Gold mutual funds)</li>
+                            <li><strong>Regular Review:</strong> Annual rebalancing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Contribution Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <h2 class="section-title">Team Contribution</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <h3>Dhruv Kothari</h3>
+                    <p class="prn">PRN: 24020341085</p>
+                </div>
+                <div class="team-card">
+                    <h3>Karan Adhikari</h3>
+                    <p class="prn">PRN: 24020341093</p>
+                </div>
+                <div class="team-card">
+                    <h3>Abishec Shah</h3>
+                    <p class="prn">PRN: 24020341133</p>
+                </div>
+                <div class="team-card">
+                    <h3>Prakshal Solanki</h3>
+                    <p class="prn">PRN: 24020341210</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Portfolio Management Solution. SCMHRD MBA Batch 2024-26</p>
+                <p>Securities Analysis & Portfolio Management - Group Assignment</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
