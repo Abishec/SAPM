@@ -128,7 +128,7 @@ function createAllocationChart() {
     if (!ctx) return;
 
     const allocationData = {
-        'Equity Funds': 39,
+        'Equity Funds': 35,
         'Debt Funds': 50,
         'Hybrid Funds': 10,
         'Gold': 5
@@ -142,7 +142,7 @@ function createAllocationChart() {
             'Small Cap: 5%',
             'Flexi Cap: 6%',
             'ELSS: 6%',
-            'Hybrid: 4%'
+        
         ],
         'Debt Funds': [
             'Short Term Debt: 20%',
